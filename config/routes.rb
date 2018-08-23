@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+  devise_for :users, class_name: "Api::V1::User"
+  namespace :Api do
+    namespace :V1 do
+    end
+  end
 end
